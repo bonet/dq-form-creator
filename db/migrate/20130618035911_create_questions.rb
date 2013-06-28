@@ -9,6 +9,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.string  "input_name",       :limit => 50, :null => false
       t.text    "description",                    :null => false
       t.integer "sort_num"
+      t.integer "hidden",           :limit => 1,  :null => false,   :default => 0
     end
   end
 

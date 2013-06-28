@@ -3,13 +3,13 @@ class QuestionFormsController < ApplicationController
   def get_questions
     qf = QuestionForm.new
     questions = qf.get_questions(params[:qfid])
-    render :text => questions.to_json
+    render :json => questions.to_json
   end
   
   def get_answers
     qf = QuestionForm.new
     answers = qf.get_answers(params[:qfid])
-    render :text => answers.to_json
+    render :json => answers.to_json
   end
   
 =begin

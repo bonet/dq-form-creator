@@ -6,7 +6,7 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: questionnaire2
+  database: questionnaire
   username: root
   password: 
   host: 127.0.0.1

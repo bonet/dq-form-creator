@@ -14,9 +14,10 @@
 ActiveRecord::Schema.define(:version => 20130618035932) do
 
   create_table "answers", :force => true do |t|
-    t.integer "question_id",      :null => false
-    t.text    "description",      :null => false
-    t.integer "next_question_id"
+    t.integer "question_id",    :null => false
+    t.text    "value",          :null => false
+    t.text    "description",    :null => false
+    t.integer "next_questions", :null => false
   end
 
   add_index "answers", ["question_id"], :name => "idx_answers_on_question_id"
@@ -26,12 +27,13 @@ ActiveRecord::Schema.define(:version => 20130618035932) do
   end
 
   create_table "questions", :force => true do |t|
-    t.integer "question_form_id",               :null => false
-    t.string  "answer_ids",                     :null => false
-    t.string  "input_type",       :limit => 50, :null => false
-    t.string  "input_name",       :limit => 50, :null => false
-    t.text    "description",                    :null => false
+    t.integer "question_form_id",                              :null => false
+    t.string  "answer_ids",                                    :null => false
+    t.string  "input_type",       :limit => 50,                :null => false
+    t.string  "input_name",       :limit => 50,                :null => false
+    t.text    "description",                                   :null => false
     t.integer "sort_num"
+    t.integer "hidden",           :limit => 1,  :default => 0, :null => false
   end
 
 end

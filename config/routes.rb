@@ -12,7 +12,7 @@ Questionnaire::Application.routes.draw do
 
   match '/get_questions/:qfid', :to => 'question_forms#get_questions'
   match '/get_answers/:qfid', :to => 'question_forms#get_answers'
-  match '/get_question_answers_relationships/:qfid', :to => 'question_forms#get_question_answers_relationships'
+  #match '/get_question_answers_relationships/:qfid', :to => 'question_forms#get_question_answers_relationships'
 
   root :to => 'pages#home'
   
